@@ -7,7 +7,7 @@
 #       /proc/device-tree/firmware/android/fstab/vendor
 
 #<src>                                      <mnt_point>             <type>  <mnt_flags and options>                                                                           <fs_mgr_flags>                                                                                       defaults
-dev/block/bootdevice/by-name/system         /                        ext4    ro,barrier=1,discard                                                                             wait,slotselect,avb
+/dev/block/bootdevice/by-name/system        /                        ext4    ro,barrier=1,discard                                                                             wait,slotselect,avb
 /dev/block/bootdevice/by-name/userdata      /data                    ext4    noatime,nosuid,nodev,barrier=1,noauto_da_alloc,discard                                           wait,check,fileencryption=ice,quota,encryptable=footer
 /dev/block/bootdevice/by-name/userdata      /data                    f2fs    noatime,nosuid,nodev,discard                                                                     wait,check,fileencryption=ice,quota,encryptable=footer
 /dev/block/bootdevice/by-name/vendor        /vendor                  ext4    ro,barrier=1,discard                                                                             wait,slotselect,avb
