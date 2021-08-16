@@ -30,3 +30,8 @@ PRODUCT_NAME := twrp_akari
 PRODUCT_BRAND := sony
 PRODUCT_MODEL := akari
 PRODUCT_MANUFACTURER := sony
+
+# Bypass anti-rollback ROMs protection
+# Set build date to Jan 1 2009 00:00:00
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.date.utc=1230768000
