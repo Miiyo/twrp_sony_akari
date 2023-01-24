@@ -25,6 +25,10 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
+
+
+ALLOW_MISSING_DEPENDENCIES :=  true
+
 DEVICE_PATH := device/sony/akari
 
 # Android Verified Boot
