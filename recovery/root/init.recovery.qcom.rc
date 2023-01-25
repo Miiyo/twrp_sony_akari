@@ -32,6 +32,10 @@ on fs
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
 
 on boot
+    insmod /vendor/lib/clearpad_rmi_dev.ko
+    insmod /vendor/lib/clearpad_core.ko
+    insmod /vendor/lib/clearpad_i2c.ko
+    write /sys/devices/virtual/input/clearpad/post_probe_start 1
     mkdir /firmware
     mount vfat /dev/block/bootdevice/by-name/modem /firmware ro
     start qseecomd
