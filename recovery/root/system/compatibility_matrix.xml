@@ -5,7 +5,7 @@
         matrix_kernel_config_p_4.9.xml
         matrix_kernel_config_p_4.14.xml
 -->
-<compatibility-matrix version="5.0" type="framework" level="3">
+<compatibility-matrix version="1.0" type="framework" level="3">
     <hal format="hidl" optional="false">
         <name>android.hardware.audio</name>
         <version>4.0</version>
