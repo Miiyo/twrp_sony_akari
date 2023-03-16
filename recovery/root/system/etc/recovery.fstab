@@ -1,0 +1,16 @@
+# Android fstab file.
+# The filesystem that contains the filesystem e2fsck binary (typically /system) cannot
+# specify 'check', and must come before any filesystems that do specify 'check'
+
+# NOTE: /system and /vendor partitions are early-mounted and the fstab entry is specified in device tree (duplicated below for recovery image purposes only):
+#       /proc/device-tree/firmware/android/fstab/system
+#       /proc/device-tree/firmware/android/fstab/vendor
+
+#<src>                                      <mnt_point>             <type>  <mnt_flags and options>                                                                           <fs_mgr_flags>                                                                                       defaults
+dev/block/bootdevice/by-name/system         /                        ext4    ro,barrier=1,discard                                                                             wait,slotselect,avb
+/dev/block/bootdevice/by-name/userdata      /data                    ext4    noatime,nosuid,nodev,barrier=1,noauto_da_alloc,discard                                           wait,check,fileencryption=ice,quota,encryptable=footer
+/dev/block/bootdevice/by-name/userdata      /data                    f2fs    noatime,nosuid,nodev,discard                                                                     wait,check,fileencryption=ice,quota,encryptable=footer
+/dev/block/bootdevice/by-name/vendor        /vendor                  ext4    ro,barrier=1,discard                                                                             wait,slotselect,avb
+/dev/block/bootdevice/by-name/frp           /persistent              emmc    defaults                                                                                         defaults
+/dev/block/bootdevice/by-name/misc          /misc                    emmc    defaults                                                                                         defaults
+/dev/block/zram0                            none                     swap    defaults                                                                                         zramsize=1073741824
