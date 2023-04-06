@@ -1,4 +1,4 @@
-# twrp_sony_akari
+# TWRP SONY AKARI
 
 TWRP device tree for Sony Xperia XZ2
 
