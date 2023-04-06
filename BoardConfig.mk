@@ -99,3 +99,11 @@ TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 
 # Workaround for error copying vendor files to recovery ramdisk
 TARGET_COPY_OUT_VENDOR := vendor
+
+# TWRP - Crypto
+TW_INCLUDE_CRYPTO := true
+
+# TWRP - Crypto - FBE
+BOARD_USES_QCOM_FBE_DECRYPTION := true
+TW_INCLUDE_CRYPTO_FBE := true
+TW_USE_FSCRYPT_POLICY := 1
