@@ -30,3 +30,7 @@ import /init.recovery.qcom_decrypt.rc
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    insmod /vendor/lib/clearpad_rmi_dev.ko
+    insmod /vendor/lib/clearpad_core.ko
+    insmod /vendor/lib/clearpad_i2c.ko
+    write /sys/devices/virtual/input/clearpad/post_probe_start 1
