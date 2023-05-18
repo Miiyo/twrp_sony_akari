@@ -34,6 +34,7 @@ on fs
     insmod /vendor/lib/clearpad_core.ko
     insmod /vendor/lib/clearpad_i2c.ko
     write /sys/devices/virtual/input/clearpad/post_probe_start 1
+    install_keyring
 
 on init
     start vendor.qseecomd
