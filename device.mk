@@ -45,6 +45,10 @@ PRODUCT_PACKAGES += \
     qcom_decrypt \
     qcom_decrypt_fbe
 
+# keystore2
+PRODUCT_PACKAGES += \
+    android.system.keystore2
+
 # Screen
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
